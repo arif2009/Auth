@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { Button, Card, CardSection, Input } from './common';
 
 class LoginForm extends Component {
   state = { email: '', password: '' };
+
+  onButtonPress() {
+    const { email, password } = this.state;
+    const data = 'grant_type=password&username=' + encodeURIComponent(email) + '&password=' + encodeURIComponent(password);
+    const header = { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } };
+
+    axios.post('http://www.bloodconnector.org/token', data, header)
+    .then(response => console.log(response,response.data));
+
+    console.log(data);
+  }
 
   render() {
     return (
@@ -27,7 +39,9 @@ class LoginForm extends Component {
           </CardSection>
 
           <CardSection>
-            <Button>Log In</Button>
+            <Button onPress={this.onButtonPress.bind(this)}>
+              Log In
+            </Button>
           </CardSection>
       </Card>
     );
