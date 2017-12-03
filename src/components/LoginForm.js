@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Button, Card, CardSection, Input } from './common';
 
 class LoginForm extends Component {
-  state = { email: '', password: '' };
+  state = { email: '', password: '', error: '' };
 
   onButtonPress() {
     const { email, password } = this.state;
@@ -11,7 +11,11 @@ class LoginForm extends Component {
     const header = { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } };
 
     axios.post('http://www.bloodconnector.org/token', data, header)
-    .then(response => console.log(response,response.data));
+    .then(response => console.log(response.data))
+    .catch(() => { 
+      this.setState({ error: 'Authentication Failed' });
+      console.log(this.state.error);
+    });
 
     console.log(data);
   }
