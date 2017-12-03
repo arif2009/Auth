@@ -5,18 +5,20 @@
  */
 
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import { Header } from './src/components/common';
+import LoginForm from './src/components/LoginForm';
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <View>
         <Header headerText="Authentication" />
-        <Text>
-          Welcome to React Native!
-        </Text>
+        <LoginForm />
       </View>
     );
   }
 }
+
+export default App;
+
