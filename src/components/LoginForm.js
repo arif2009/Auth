@@ -1,23 +1,49 @@
 import React, { Component } from 'react';
+import { Text } from 'react-native';
 import axios from 'axios';
-import { Button, Card, CardSection, Input } from './common';
+import { Button, Card, CardSection, Input, Spinner } from './common';
 
 class LoginForm extends Component {
-  state = { email: '', password: '', error: '' };
+  state = { email: '', password: '', error: '', loading: false };
 
   onButtonPress() {
     const { email, password } = this.state;
-    const data = 'grant_type=password&username=' + encodeURIComponent(email) + '&password=' + encodeURIComponent(password);
+    this.setState({ error: '', loading: true });
+    const data = `grant_type=password&username=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
     const header = { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } };
 
     axios.post('http://www.bloodconnector.org/token', data, header)
-    .then(response => console.log(response.data))
-    .catch(() => { 
-      this.setState({ error: 'Authentication Failed' });
-      console.log(this.state.error);
-    });
+    .then(response => this.onLoginSuccess(response.data))
+    .catch(this.onLoginFailed.bind(this));
+  }
 
-    console.log(data);
+  onLoginFailed() {
+    this.setState({ 
+      error: 'Authentication Failed.',
+      loading: false
+     });
+  }
+
+  onLoginSuccess(result) {
+    console.log(result);
+    this.setState({ 
+      email: '', 
+      password: '',
+      error: '',
+      loading: false
+     });
+  }
+
+  renderButton() {
+    if (this.state.loading) {
+      return <Spinner size="small" />;
+    }
+
+    return (
+      <Button onPress={this.onButtonPress.bind(this)}>
+        Log In
+      </Button>
+    );
   }
 
   render() {
@@ -42,14 +68,24 @@ class LoginForm extends Component {
               />
           </CardSection>
 
+          <Text style={styles.errorTextStyle}>
+            {this.state.error}
+          </Text>
+
           <CardSection>
-            <Button onPress={this.onButtonPress.bind(this)}>
-              Log In
-            </Button>
+            {this.renderButton()}
           </CardSection>
       </Card>
     );
   }
 }
+
+const styles = {
+  errorTextStyle: {
+    fontSize: 20,
+    alignSelf: 'center',
+    color: 'red'
+  }
+};
 
 export default LoginForm;
