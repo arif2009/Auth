@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, AsyncStorage } from 'react-native';
 import axios from 'axios';
 import { Button, Card, CardSection, Input, Spinner } from './common';
 
@@ -24,14 +24,24 @@ class LoginForm extends Component {
      });
   }
 
-  onLoginSuccess(result) {
-    console.log(result);
+  onLoginSuccess(userData) {
     this.setState({ 
       email: '', 
       password: '',
       error: '',
       loading: false
      });
+
+    this.setApplicationData(userData);
+  }
+
+  async setApplicationData(data) {
+    try {
+      await AsyncStorage.setItem('@MyAuth:user', JSON.stringify(data));
+      console.log('Saved');
+    } catch (error) {
+      console.log('Error in LoginForm > setApplicationData', error);
+    }
   }
 
   renderButton() {

@@ -12,8 +12,10 @@ const Spinner = ({ size }) => {
 const styles = {
     spinnerStyle: {
         flex: 1,
+        flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        //height: Dimensions.get('window').height
     }
 
 };
