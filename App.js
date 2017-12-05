@@ -53,7 +53,7 @@ const styles = {
   viewStyle: {
     flex: 1, 
     flexDirection: 'column',
-    justifyContent: 'flex-start'
+    backgroundColor: 'red'
   }
 };
 

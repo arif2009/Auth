@@ -24,6 +24,7 @@ const styles = {
     buttonStyle: {
         flex: 1,
         flexDirection: 'row',
+        justifyContent: 'center',
         alignItems: 'center',
         borderColor: '#007aff',        
         paddingTop: 10,
