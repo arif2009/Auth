@@ -19,16 +19,13 @@ const styles = {
         paddingLeft: 20,
         color: '#007aff',
         fontWeight: '600'
-
     },
     buttonStyle: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'center',
         alignItems: 'center',
-        borderColor: '#007aff',        
-        paddingTop: 10,
-        paddingBottom: 10
+        borderColor: '#007aff',
+        backgroundColor: '#fff',
+        paddingBottom: 10,
+        paddingTop: 10
     }
 };
 
