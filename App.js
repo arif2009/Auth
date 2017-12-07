@@ -44,6 +44,7 @@ class App extends Component {
       <View style={styles.viewStyle}>
         <Header headerText="Authentication" />
         {this.renderContent()}
+        <View style={{width: 100, height: 100, backgroundColor: 'blue'}}></View>
       </View>
     );
   }
@@ -53,6 +54,7 @@ const styles = {
   viewStyle: {
     flex: 1, 
     flexDirection: 'column',
+    justifyContent: 'flex-start',
     backgroundColor: 'red'
   }
 };
