@@ -20,6 +20,16 @@ class App extends Component {
     });
   }
 
+  onButtonPress(){
+    //AsyncStorage.removeItem('@MyAuth:user');
+    AsyncStorage.clear();
+    this.setState({ logedIn: false });
+    AsyncStorage.getItem('@MyAuth:user', (error, result) => {
+      console.log('result', result, (result != null));
+      //this.setState({ logedIn: true });
+    });
+  }
+
   async getApplicationData() {
     return await AsyncStorage.getItem('@MyAuth:user', (error, result) => {
       return result;
@@ -31,7 +41,7 @@ class App extends Component {
     //console.log(this.state.logedIn);
     switch (this.state.logedIn) {
       case true:
-        return <Button onPress={async x => await AsyncStorage.clear()}>Log Out</Button>;
+        return <Button onPress={this.onButtonPress.bind(this)}>Log Out</Button>;
       case false:
         return <LoginForm />;
       default:
