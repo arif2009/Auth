@@ -11,9 +11,13 @@ const Spinner = ({ size }) => {
 
 const styles = {
     spinnerStyle: {
-        justifyContent: 'center',
+        flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: 'green'
+        justifyContent: 'center',
+        borderColor: '#007aff',
+        backgroundColor: '#fff',
+        paddingBottom: 10,
+        paddingTop: 10
         //height: Dimensions.get('window').height
     }
 

@@ -21,7 +21,9 @@ const styles = {
         fontWeight: '600'
     },
     buttonStyle: {
+        flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'center',
         borderColor: '#007aff',
         backgroundColor: '#fff',
         paddingBottom: 10,

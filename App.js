@@ -37,15 +37,13 @@ class App extends Component {
       default:
         return <Spinner size="large" />;
     }
-    //{this.renderContent()}
   }
 
   render() {
     return (
       <View style={styles.viewStyle}>
         <Header headerText="Authentication" />
-        <Spinner size="large" />
-        <View style={{width: 100, height: 100, backgroundColor: 'blue'}}></View>
+        {this.renderContent()}
       </View>
     );
   }
