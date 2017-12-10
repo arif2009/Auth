@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, AsyncStorage } from 'react-native';
 import axios from 'axios';
+import RNRestart from 'react-native-restart';
 import { Button, Card, CardSection, Input, Spinner } from './common';
 
 class LoginForm extends Component {
@@ -39,6 +40,7 @@ class LoginForm extends Component {
     try {
       await AsyncStorage.setItem('@MyAuth:user', JSON.stringify(data));
       console.log('Saved');
+      RNRestart.Restart();
     } catch (error) {
       console.log('Error in LoginForm > setApplicationData', error);
     }
