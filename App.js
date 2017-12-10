@@ -13,29 +13,21 @@ class App extends Component {
 
   state = { logedIn: null };
 
-  componentWillMount() {
+  componentDidMount() {
     AsyncStorage.getItem('@MyAuth:user', (error, result) => {
-      console.log('result', result, (result != null));
-      this.setState({ logedIn: true });
+      console.log('ComponentDidMount', result, (result != null));
+      this.setState({ logedIn: result != null });
     });
   }
 
-  onButtonPress(){
+  onButtonPress() {
     //AsyncStorage.removeItem('@MyAuth:user');
     AsyncStorage.clear();
-    this.setState({ logedIn: false });
     AsyncStorage.getItem('@MyAuth:user', (error, result) => {
-      console.log('result', result, (result != null));
-      //this.setState({ logedIn: true });
+      console.log('LogOut', result, (result != null));
     });
+    this.setState({ logedIn: false });
   }
-
-  async getApplicationData() {
-    return await AsyncStorage.getItem('@MyAuth:user', (error, result) => {
-      return result;
-    }
-  );
-}
 
   renderContent() {
     //console.log(this.state.logedIn);
