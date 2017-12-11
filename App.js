@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import { View, AsyncStorage } from 'react-native';
+import { View, AsyncStorage, StatusBar } from 'react-native';
 import { Header, Button, Spinner } from './src/components/common';
 import LoginForm from './src/components/LoginForm';
 
@@ -44,6 +44,7 @@ class App extends Component {
   render() {
     return (
       <View style={styles.viewStyle}>
+        <StatusBar backgroundColor="#1c313a" barStyle="light-content" />
         <Header headerText="Authentication" />
         {this.renderContent()}
       </View>
@@ -53,7 +54,8 @@ class App extends Component {
 
 const styles = {
   viewStyle: {
-    flex: 1, 
+    flex: 1,
+    backgroundColor:'#455a64',
     flexDirection: 'column',
     justifyContent: 'flex-start'
   }
