@@ -14,8 +14,6 @@ const styles = {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        borderColor: '#007aff',
-        backgroundColor: '#fff',
         paddingBottom: 10,
         paddingTop: 10
         //height: Dimensions.get('window').height

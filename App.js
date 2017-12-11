@@ -45,7 +45,7 @@ class App extends Component {
     return (
       <View style={styles.viewStyle}>
         <StatusBar backgroundColor="#1c313a" barStyle="light-content" />
-        <Header headerText="Authentication" />
+        <Header headerText="Auth" />
         {this.renderContent()}
       </View>
     );

@@ -16,16 +16,18 @@ const styles = {
 
     textStyle: {
         fontSize: 18,
-        paddingLeft: 20,
-        color: '#007aff',
-        fontWeight: '600'
+        color: '#fff',
+        fontWeight: '600',
+        alignSelf: 'stretch'
     },
     buttonStyle: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
         borderColor: '#007aff',
-        backgroundColor: '#fff',
+        backgroundColor: '#0080ff',
+        borderRadius: 5,
+        height:50,
         paddingBottom: 10,
         paddingTop: 10
     }

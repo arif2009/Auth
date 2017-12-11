@@ -4,27 +4,31 @@ import { Text, View } from 'react-native';
 
 // Make a component
 const Header = (props) => {
-  const { textStyle, viewStyle } = styles;
+  const { textStyle, tetxColor, viewStyle, smallText } = styles;
 
   return (
     <View style={viewStyle}>
-      <Text style={textStyle}>{props.headerText}</Text>
+      <Text style={[tetxColor, textStyle]}>{props.headerText}</Text>
+      <Text style={[tetxColor, smallText]}>Token Based Authentication</Text>
     </View>
   );
 };
 
 const styles = {
   viewStyle: {
-    backgroundColor: '#F8F8F8',
     justifyContent: 'center',
     alignItems: 'center',
-    height: 60,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 5 },
-    shadowOpacity: 0.2
+    height: 200
+
+  },
+  tetxColor:{
+    color: '#FFF'
   },
   textStyle: {
-    fontSize: 20
+    fontSize: 30
+  },
+  smallText: {
+    fontSize: 15
   }
 };
 
