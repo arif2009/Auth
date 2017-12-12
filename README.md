@@ -33,7 +33,11 @@ $ npm i --do-not-make-me-cry
 
 # O/P
 
-![Login Form](https://github.com/arif2009/Auth/blob/develop/LoginForm.png)
+## Login Form :
+![Login Form](https://github.com/arif2009/Auth/blob/master/LoginForm.png)
+
+## Logout Form :
+![Logout Form](https://github.com/arif2009/Auth/blob/master/LogoutForm.png)
 
 # License
 
