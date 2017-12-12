@@ -33,7 +33,7 @@ $ npm i --do-not-make-me-cry
 
 # O/P
 
-![alt text][[https://github.com/arif2009/Auth/blob/develop/LoginForm.png|alt=LoginForm]]
+[[https://github.com/arif2009/Auth/blob/develop/LoginForm.png|alt=LoginForm]]
 
 # License
 
