@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, AsyncStorage } from 'react-native';
+import { Text, AsyncStorage, TouchableOpacity } from 'react-native';
 import axios from 'axios';
 import RNRestart from 'react-native-restart';
 import { Button, Card, CardSection, Input, Spinner } from './common';
@@ -52,9 +52,9 @@ class LoginForm extends Component {
     }
 
     return (
-      <Button onPress={this.onButtonPress.bind(this)}>
-        Log In
-      </Button>
+      <TouchableOpacity style={styles.buttonStyle} onPress={this.onButtonPress.bind(this)} >
+        <Text style={styles.textStyle}>Log In</Text>
+      </TouchableOpacity>
     );
   }
 
@@ -98,6 +98,24 @@ const styles = {
     fontWeight: 'normal',
     alignSelf: 'center',
     color: '#ff4000'
+  },
+  buttonStyle: {
+    flex:1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor: '#007aff',
+    backgroundColor: '#0080ff',
+    borderRadius: 5,
+    height:50,
+    paddingBottom: 10,
+    paddingTop: 10
+  },
+  textStyle: {
+    fontSize: 18,
+    color: '#fff',
+    fontWeight: '600',
+    alignSelf: 'stretch'
   }
 };
 
