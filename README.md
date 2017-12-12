@@ -31,13 +31,18 @@ $ npm i --do-not-make-me-cry
 # Build and run the solution
 ```
 
+```bash
+# Test Authentication
+Create an account on [bloodconnector.org](http://bloodconnector.org/#!/signup){:target="_blank"}
+```
+
 # O/P
 
 ### Login Form :
-![Login Form](https://github.com/arif2009/Auth/blob/master/LoginForm.png)
+![Login Form](https://github.com/arif2009/Auth/blob/master/LoginForm.png){:target="_blank"}
 
 ### Logout Form :
-![Logout Form](https://github.com/arif2009/Auth/blob/master/LogoutForm.png)
+![Logout Form](https://github.com/arif2009/Auth/blob/master/LogoutForm.png){:target="_blank"}
 
 # License
 
