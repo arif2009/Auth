@@ -31,10 +31,8 @@ $ npm i --do-not-make-me-cry
 # Build and run the solution
 ```
 
-```bash
-# Test Authentication 
-```
-Create an account on [bloodconnector.org](http://bloodconnector.org/#!/signup), here **Token Based Authentication's** are implemented. Use this credential to authenticate.
+#### Test Authentication 
+Create an account on [bloodconnector.org](http://bloodconnector.org/#!/signup) , here **Token Based Authentication's** are implemented. Use this credential to authenticate.
 
 # O/P
 
