@@ -39,10 +39,10 @@ Create an account on [bloodconnector.org](http://bloodconnector.org/#!/signup){:
 # O/P
 
 ### Login Form :
-![Login Form](https://github.com/arif2009/Auth/blob/master/LoginForm.png){:target="_blank"}
+![Login Form](https://github.com/arif2009/Auth/blob/master/LoginForm.png)
 
 ### Logout Form :
-![Logout Form](https://github.com/arif2009/Auth/blob/master/LogoutForm.png){:target="_blank"}
+![Logout Form](https://github.com/arif2009/Auth/blob/master/LogoutForm.png)
 
 # License
 
