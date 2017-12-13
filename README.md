@@ -32,9 +32,9 @@ $ npm i --do-not-make-me-cry
 ```
 
 ```bash
-# Test Authentication
-Create an account on [bloodconnector.org](http://bloodconnector.org/#!/signup){:target="_blank"}
+# Test Authentication 
 ```
+Create an account on [bloodconnector.org](http://bloodconnector.org/#!/signup), here **Token Based Authentication's** are implemented. Use this credential to authenticate.
 
 # O/P
 
